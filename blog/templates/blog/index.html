@@ -1,0 +1,9 @@
+{% extends "blog/base.html" %}
+{% block content %}
+    {% for post in postes %}
+    <h1> {{post.title}} </h1>
+    <p>By  {{post.auhtor}} on {{post.date}} </p>
+    {{post.post}}
+    {% endfor %}
+    <a href="{% url 'contact-page' %}"> Go to Contact Page </a>
+{% endblock %}
